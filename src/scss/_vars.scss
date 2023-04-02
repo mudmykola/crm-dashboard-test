@@ -1,0 +1,86 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: 'Poppins', sans-serif;
+  --content-width: 1317px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  // colors
+  --light-color: #fff;
+  //fonts
+  --font-r: 400;
+  --font-m: 500;
+  --font-sb: 600;
+  //transition
+  --h-tr: all 0.5s ease;
+  --d-tr: all 0.3s ease;
+}
+
+//color
+$c100: #FAFBFF;
+$c101: #000000;
+$c102: #9197B3;
+$c103: #16C098;
+$c104: #B5B7C0;
+$c105: #292D32;
+$c106: #008767;
+$c107: #DF0404;
+$c108: #FFC5C5;
+$c109: #5932EA;
+$c110: #404B52;
+
+$default: #fff;
+
+//effect
+%border-ef {
+  box-shadow: 0px 5px 35px rgba(225, 242, 255, 0.9);
+}
+
+%header-ef {
+  background: linear-gradient(
+                  180deg,
+                  rgba(0, 80, 157, 0.08) 0%,
+                  rgba(0, 80, 157, 0) 100%
+  );
+}
+
+// transition
+%dtrans {
+  transition: var(--d-tr);
+}
+
+%htrans {
+  transition: var(--h-tr);
+}
+
+//btn
+%send-btn {
+  border: 1px solid $c100;
+  padding: 17px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+
+  a {
+    font-weight: var(--font-b);
+  }
+}
+
+%acide-btn-active {
+  background: $c109;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: var(--font-m);
+  color: $default;
+  padding: 13px 0 13px 49px;
+  border-radius: 8px;
+}
+
+
+
+//hover
+
+%color-eff {
+  background: #64B531;
+  transition: var(--h-tr);
+}
