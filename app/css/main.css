@@ -178,21 +178,48 @@ a {
   -ms-flex-align: center;
   align-items: center;
   height: 46px;
-  text-align: left;
   width: 100%;
   background: transparent;
-  font-weight: var(--font-m);
-  color: #9197B3;
   border-radius: 8px;
+  padding-left: 11px;
+}
+.header-acide__list ul li button p {
+  color: #9197B3;
+  font-weight: var(--font-m);
+  text-align: left;
   padding-left: 10px;
 }
 .header-acide__list ul li button.active {
   background: #5932EA;
 }
-.header-acide__list ul li button img {
+.header-acide__list ul li button.active p {
+  color: #fff;
+}
+.header-acide__list ul li button.active svg path {
+  stroke: #fff;
+}
+.header-acide__list ul li button svg {
   margin-right: 14px;
 }
 .header-acide__list ul li + li {
   margin-top: 10px;
+}
+.header-acide__btn--arrow {
+  position: relative;
+}
+.header-acide__btn--arrow.active:before {
+  background-image: url("/img/svg/acid-chevrone-1-white.svg");
+}
+.header-acide__btn--arrow::before {
+  position: absolute;
+  content: "";
+  background-image: url("/img/svg/acid-chevrone-1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  top: 35%;
+  right: 5%;
 }
 /*# sourceMappingURL=main.css.map */
