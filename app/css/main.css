@@ -125,4 +125,101 @@ a {
   width: 242px;
   padding: 0 28px;
 }
+
+.header-acide {
+  width: 306px;
+  height: 100vh;
+  background: #fff;
+}
+.header-acide__box {
+  width: 242px;
+  padding: 36px 28px;
+}
+.header-acide__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+.header-acide__logo--text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+}
+.header-acide__logo--text h2 {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: var(--font-sb);
+  color: #000000;
+  margin: 0 4px 0 8px;
+}
+.header-acide__logo--text p {
+  font-size: 10px;
+  line-height: 18px;
+  font-weight: var(--font-m);
+}
+.header-acide__list {
+  margin-top: 54px;
+}
+.header-acide__list ul li {
+  width: 250px;
+}
+.header-acide__list ul li button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 46px;
+  width: 100%;
+  background: transparent;
+  border-radius: 8px;
+  padding-left: 11px;
+}
+.header-acide__list ul li button p {
+  color: #9197B3;
+  font-weight: var(--font-m);
+  text-align: left;
+  padding-left: 10px;
+}
+.header-acide__list ul li button.active {
+  background: #5932EA;
+}
+.header-acide__list ul li button.active p {
+  color: #fff;
+}
+.header-acide__list ul li button.active svg path {
+  stroke: #fff;
+}
+.header-acide__list ul li button svg {
+  margin-right: 14px;
+}
+.header-acide__list ul li + li {
+  margin-top: 10px;
+}
+.header-acide__btn--arrow {
+  position: relative;
+}
+.header-acide__btn--arrow.active:before {
+  background-image: url("/img/svg/acid-chevrone-1-white.svg");
+}
+.header-acide__btn--arrow::before {
+  position: absolute;
+  content: "";
+  background-image: url("/img/svg/acid-chevrone-1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  top: 35%;
+  right: 5%;
+}
 /*# sourceMappingURL=main.css.map */
