@@ -3,7 +3,7 @@
 :root {
   // base
   --font-family: 'Poppins', sans-serif;
-  --content-width: 1317px;
+  --content-width: 968px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   // colors
@@ -29,12 +29,14 @@ $c107: #DF0404;
 $c108: #FFC5C5;
 $c109: #5932EA;
 $c110: #404B52;
+$c111: #757575;
+$c112: #F9FBFF;
 
 $default: #fff;
 
 //effect
 %border-ef {
-  box-shadow: 0px 5px 35px rgba(225, 242, 255, 0.9);
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
 }
 
 %header-ef {
@@ -79,8 +81,8 @@ $default: #fff;
 
 
 //hover
-
 %color-eff {
   background: #64B531;
   transition: var(--h-tr);
 }
+
