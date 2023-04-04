@@ -1,5 +1,6 @@
 .dashboard {
   padding: 41px 95px 0 71px;
+
   &-inner {
     &__title {
       h1 {
@@ -10,6 +11,7 @@
       }
     }
   }
+
   &-box {
     margin-top: 51px;
     width: 100%;
@@ -17,11 +19,13 @@
     background: $default;
     border-radius: 30px;
     @extend %border-ef;
+
     &__title {
       padding: 30px 38px 40px 38px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       h2 {
         font-size: 22px;
         line-height: 30px;
@@ -29,12 +33,15 @@
         font-weight: var(--font-sb);
         margin-bottom: 10px;
       }
+
       p {
         color: $c103;
       }
+
       &--search {
         label {
           position: relative;
+
           &::before {
             position: absolute;
             content: '';
@@ -48,6 +55,7 @@
             left: 3%;
           }
         }
+
         input {
           border: none;
           outline: none;
@@ -64,4 +72,85 @@
       }
     }
   }
+
+  &-category {
+    padding: 0 57px 0 38px;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      li {
+        h2 {
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: var(--font-m);
+          color: $c104;
+        }
+      }
+    }
+
+    &__company {
+      margin: 0 61px 0 57px;
+    }
+
+    &__email {
+      margin: 0 168px 0 52px;
+    }
+
+    &__status {
+      margin-left: 96px;
+    }
+    &__globline{
+      margin-top: 14px;
+      width: 100%;
+      border: 1px solid $c113;
+    }
+  }
+  &-list{
+    padding: 0 57px 0 38px;
+    margin-top: 20px;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      li {
+
+        h2,a,button {
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: var(--font-m);
+          color: $c105;
+        }
+      }
+    }
+    &__name{
+
+    }
+    &__company {
+      margin-left: 82px;
+
+    }
+&__phone{
+  margin-left: 67px;
+}
+    &__email {
+      margin-left: 52px;
+
+
+    }
+    &__country{
+
+
+      margin-left: 61px;
+    }
+
+    &__status {
+      margin-left: 47px;
+
+    }
+  }
+
 }
