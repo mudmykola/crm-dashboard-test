@@ -11,8 +11,11 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ex_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/ex.js */ "./src/js/components/ex.js");
 /* harmony import */ var _components_ex_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_ex_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/slider */ "./src/js/components/slider.js");
-/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_slider__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_acide_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/acide.js */ "./src/js/components/acide.js");
+/* harmony import */ var _components_acide_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_acide_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_search_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/search.js */ "./src/js/components/search.js");
+/* harmony import */ var _components_search_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_search_js__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -152,44 +155,87 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/acide.js":
+/*!************************************!*\
+  !*** ./src/js/components/acide.js ***!
+  \************************************/
+/***/ (() => {
+
+const headerAcidBtn = document.querySelectorAll('.header-acide__btn');
+const dashboard = document.querySelector('#dashboard');
+const dashboardList = document.querySelectorAll('.dashboard-list__status' + ' button');
+headerAcidBtn.forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove active class from all buttons and add it to clicked button
+    headerAcidBtn.forEach(btn => btn.classList.toggle('active', btn === button));
+
+    // Hide all content
+    document.querySelectorAll('.content').forEach(content => {
+      content.style.display = 'none';
+    });
+
+    // Show content corresponding to button data-target
+    const target = button.getAttribute('data-target');
+    const content = document.querySelector(`#${target}`);
+    if (content) {
+      content.style.display = 'block';
+    }
+
+    // Show dashboard if button data-target is 'content-3'
+    dashboard.style.display = target === 'content-3' ? 'block' : 'none';
+    if (target === 'content-3') {
+      setTimeout(() => {
+        dashboard.style.opacity = 1;
+      }, 10);
+    }
+  });
+});
+
+// Activating the .inactive class
+dashboardList.forEach(button => {
+  button.addEventListener('click', () => {
+    const parent = button.parentNode;
+    parent.classList.toggle('inactive');
+    if (parent.classList.contains('inactive')) {
+      button.textContent = 'Inactive';
+      button.style.textAlign = 'center';
+      button.style.background = '$c108';
+      button.style.color = '$c107';
+      button.style.border = '1px solid $c107';
+    } else {
+      button.textContent = 'Active';
+      button.style.textAlign = '';
+      button.style.background = '';
+      button.style.color = '';
+      button.style.border = '';
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/components/ex.js":
 /*!*********************************!*\
   !*** ./src/js/components/ex.js ***!
   \*********************************/
 /***/ (() => {
 
-const logo = document.querySelector(".navigation-logo");
-const link = document.createElement("a");
-link.href = "google.com";
-link.appendChild(logo.children[0]);
-logo.appendChild(link);
+
 
 /***/ }),
 
-/***/ "./src/js/components/slider.js":
+/***/ "./src/js/components/search.js":
 /*!*************************************!*\
-  !*** ./src/js/components/slider.js ***!
+  !*** ./src/js/components/search.js ***!
   \*************************************/
 /***/ (() => {
 
-let swiper = new Swiper(".headercont-slider__cards", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  autoplay: {
-    delay: 5000
-  },
-  pagination: {
-    el: ".headercont-pagination",
-    clickable: true
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1
-    },
-    480: {
-      slidesPerView: 1
-    }
-  }
+const searchInput = document.querySelector('.search-input');
+searchInput.addEventListener('input', () => {
+  const searchTerm = searchInput.value.trim().toLowerCase();
+});
+searchInput.addEventListener('mousedown', () => {
+  searchInput.value = '';
 });
 
 /***/ }),

@@ -365,6 +365,29 @@ a {
   color: #404B52;
 }
 
+#dashboard {
+  display: block;
+  -webkit-animation: fade-in 1s ease-in-out;
+  animation: fade-in 1s ease-in-out;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .active {
   background: #5932EA;
   border-color: #5932EA;
@@ -378,6 +401,11 @@ a {
   background: #FFC5C5;
   color: #DF0404;
   border: 1px solid #DF0404;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
 }
 
 .header-acide {
