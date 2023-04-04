@@ -5,7 +5,8 @@ html {
 ul,
 p,
 h3,
-h2 {
+h2,
+h1{
   list-style: none;
   margin: 0;
   padding: 0;
@@ -88,11 +89,15 @@ a {
 
 .container {
   margin: 0 auto;
-  padding: 0 var(--container-offset);
   width: var(--container-width);
 }
 // acide container
 .acide-container {
   width: 242px;
   padding: 0 28px;
+}
+.dashboard-container{
+  width: 998px;
+  margin: 0 auto;
+  padding: 0 38px;
 }

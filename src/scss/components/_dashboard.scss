@@ -1,0 +1,259 @@
+.dashboard {
+  padding: 41px 95px 0 71px;
+
+  &-inner {
+    &__title {
+      h1 {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: var(--font-m);
+        color: $c101;
+      }
+    }
+  }
+
+  &-box {
+    margin-top: 51px;
+    width: 100%;
+    height: 100%;
+    background: $default;
+    border-radius: 30px;
+    @extend %border-ef;
+
+    &__title {
+      width: 980px;
+      padding: 30px 38px 40px 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        font-size: 22px;
+        line-height: 30px;
+        color: $c101;
+        font-weight: var(--font-sb);
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: $c103;
+      }
+
+      &--search {
+        label {
+          position: relative;
+
+          &::before {
+            position: absolute;
+            content: '';
+            background-image: url('/img/svg/search.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            width: 24px;
+            height: 24px;
+            top: -8%;
+            left: 3%;
+          }
+        }
+
+        input {
+          border: none;
+          outline: none;
+          background: $c112;
+          width: 216px;
+          height: 38px;
+          border-radius: 10px;
+          padding: 10px 0 10px 40px;
+          font-size: 12px;
+          line-height: 18px;
+          color: $c104;
+
+        }
+      }
+    }
+  }
+
+  &-category {
+    padding: 0 57px 0 38px;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      li {
+        h2 {
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: var(--font-m);
+          color: $c104;
+        }
+      }
+    }
+
+    &__company {
+      margin: 0 61px 0 57px;
+    }
+
+    &__email {
+      margin: 0 168px 0 52px;
+    }
+
+    &__status {
+      margin-left: 96px;
+    }
+
+    &__globline {
+      margin-top: 14px;
+      width: 100%;
+      border: 1px solid $c113;
+    }
+  }
+
+  &-list {
+    padding: 0 57px 0 38px;
+    margin-top: 20px;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+
+      li {
+        h2, a {
+          font-size: 12px;
+          line-height: 18px;
+          font-weight: var(--font-m);
+          color: $c105;
+        }
+      }
+    }
+
+    &__name {
+      width: 118px;
+    }
+
+    &__company {
+      margin-left: 59px;
+      width: 64px;
+    }
+
+    &__phone {
+      width: 104px;
+      margin-left: 67px;
+    }
+
+    &__email {
+      width: 169px;
+      margin-left: 52px;
+    }
+
+    &__country {
+      width: 94px;
+      margin-left: 37px;
+    }
+
+    &__status {
+      width: 80px;
+      margin-left: 47px;
+
+      button {
+        width: 80px;
+        height: 29px;
+        color: $c106;
+        background: rgba(22, 192, 152, 0.38);
+        border: 1px solid $c106;
+        border-radius: 4px;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: var(--font-m);
+        //padding: 4px 16px;
+
+      }
+    }
+
+    &__line {
+      margin-top: 20px;
+      border: 1px solid $c113;
+    }
+  }
+
+
+  &-navig {
+    padding: 30px 38px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__data {
+      p {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: var(--font-m);
+        color: $c104;
+      }
+    }
+    &__pagination {
+      display: flex;
+      align-items: center;
+      padding-right: 2%;
+    }
+  }
+  &-pagination {
+    &__prev, &__next, &__number {
+
+      background: #F5F5F5;
+      border: 1px solid $c113;
+      width: 26px;
+      height: 26px;
+      display: flex;
+      justify-content: center;
+      border-radius: 4px;
+      text-align: center;
+      align-items: center;
+      cursor: pointer;
+
+      img {
+        width: 8px;
+        height: 12px;
+
+      }
+    }
+
+    &__next {
+      margin-left: 12px;
+    }
+
+    &__number {
+      margin-left: 12px;
+
+      p {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: var(--font-m);
+        color: $c110;
+      }
+    }
+  }
+}
+
+.active {
+  background: $c109;
+  border-color: $c109;
+
+  p {
+    color: $default;
+
+  }
+}
+
+.inactive {
+  button {
+    text-align: center;
+    background: $c108;
+    color: $c107;
+    border: 1px solid $c107;
+  }
+
+}
