@@ -1,11 +1,12 @@
-const buttons = document.querySelectorAll('.header-acide__btn');
+const headerAcidBtn = document.querySelectorAll('.header-acide__btn');
 const dashboard = document.querySelector('#dashboard');
-const buttonss = document.querySelectorAll('.dashboard-list__status button');
+const dashboardList = document.querySelectorAll('.dashboard-list__status' +
+    ' button');
 
-buttons.forEach(button => {
+headerAcidBtn.forEach(button => {
     button.addEventListener('click', () => {
         // Remove active class from all buttons and add it to clicked button
-        buttons.forEach(btn => btn.classList.toggle('active', btn === button));
+        headerAcidBtn.forEach(btn => btn.classList.toggle('active', btn === button));
 
         // Hide all content
         document.querySelectorAll('.content').forEach(content => {
@@ -31,7 +32,7 @@ buttons.forEach(button => {
 
 
 // Activating the .inactive class
-buttonss.forEach(button => {
+dashboardList.forEach(button => {
     button.addEventListener('click', () => {
         const parent = button.parentNode;
         parent.classList.toggle('inactive');
@@ -50,4 +51,6 @@ buttonss.forEach(button => {
         }
     });
 });
+
+
 

@@ -403,6 +403,11 @@ a {
   border: 1px solid #DF0404;
 }
 
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
 .header-acide {
   min-width: 306px;
   height: 100%;

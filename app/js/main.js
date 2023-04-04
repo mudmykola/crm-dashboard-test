@@ -13,6 +13,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ex_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_ex_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_acide_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/acide.js */ "./src/js/components/acide.js");
 /* harmony import */ var _components_acide_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_acide_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_search_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/search.js */ "./src/js/components/search.js");
+/* harmony import */ var _components_search_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_search_js__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -158,13 +161,13 @@ __webpack_require__.r(__webpack_exports__);
   \************************************/
 /***/ (() => {
 
-const buttons = document.querySelectorAll('.header-acide__btn');
+const headerAcidBtn = document.querySelectorAll('.header-acide__btn');
 const dashboard = document.querySelector('#dashboard');
-const buttonss = document.querySelectorAll('.dashboard-list__status button');
-buttons.forEach(button => {
+const dashboardList = document.querySelectorAll('.dashboard-list__status' + ' button');
+headerAcidBtn.forEach(button => {
   button.addEventListener('click', () => {
     // Remove active class from all buttons and add it to clicked button
-    buttons.forEach(btn => btn.classList.toggle('active', btn === button));
+    headerAcidBtn.forEach(btn => btn.classList.toggle('active', btn === button));
 
     // Hide all content
     document.querySelectorAll('.content').forEach(content => {
@@ -189,7 +192,7 @@ buttons.forEach(button => {
 });
 
 // Activating the .inactive class
-buttonss.forEach(button => {
+dashboardList.forEach(button => {
   button.addEventListener('click', () => {
     const parent = button.parentNode;
     parent.classList.toggle('inactive');
@@ -218,6 +221,27 @@ buttonss.forEach(button => {
 /***/ (() => {
 
 
+
+/***/ }),
+
+/***/ "./src/js/components/search.js":
+/*!*************************************!*\
+  !*** ./src/js/components/search.js ***!
+  \*************************************/
+/***/ (() => {
+
+const searchInput = document.querySelector('.search-input');
+searchInput.addEventListener('input', () => {
+  const searchTerm = searchInput.value.toLowerCase().trim();
+  // виконуємо пошук тут
+});
+
+function clearInput() {
+  searchInput.value = '';
+}
+
+// звертаємо увагу на зміну: onclick -> onmousedown
+searchInput.addEventListener('mousedown', clearInput);
 
 /***/ }),
 
