@@ -232,16 +232,11 @@ dashboardList.forEach(button => {
 
 const searchInput = document.querySelector('.search-input');
 searchInput.addEventListener('input', () => {
-  const searchTerm = searchInput.value.toLowerCase().trim();
-  // виконуємо пошук тут
+  const searchTerm = searchInput.value.trim().toLowerCase();
 });
-
-function clearInput() {
+searchInput.addEventListener('mousedown', () => {
   searchInput.value = '';
-}
-
-// звертаємо увагу на зміну: onclick -> onmousedown
-searchInput.addEventListener('mousedown', clearInput);
+});
 
 /***/ }),
 
