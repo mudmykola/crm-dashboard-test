@@ -9,13 +9,10 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_ex_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/ex.js */ "./src/js/components/ex.js");
-/* harmony import */ var _components_ex_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_ex_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_acide_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/acide.js */ "./src/js/components/acide.js");
-/* harmony import */ var _components_acide_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_acide_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_search_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/search.js */ "./src/js/components/search.js");
-/* harmony import */ var _components_search_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_search_js__WEBPACK_IMPORTED_MODULE_2__);
-
+/* harmony import */ var _components_acide_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/acide.js */ "./src/js/components/acide.js");
+/* harmony import */ var _components_acide_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_acide_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_search_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/search.js */ "./src/js/components/search.js");
+/* harmony import */ var _components_search_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_search_js__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
@@ -166,22 +163,22 @@ const dashboard = document.querySelector('#dashboard');
 const dashboardList = document.querySelectorAll('.dashboard-list__status' + ' button');
 headerAcidBtn.forEach(button => {
   button.addEventListener('click', () => {
-    // Remove active class from all buttons and add it to clicked button
+    // Видаліть активний клас з усіх кнопок
     headerAcidBtn.forEach(btn => btn.classList.toggle('active', btn === button));
 
-    // Hide all content
+    // Приховати весь вміст
     document.querySelectorAll('.content').forEach(content => {
       content.style.display = 'none';
     });
 
-    // Show content corresponding to button data-target
+    // Показати вміст data-target
     const target = button.getAttribute('data-target');
     const content = document.querySelector(`#${target}`);
     if (content) {
       content.style.display = 'block';
     }
 
-    // Show dashboard if button data-target is 'content-3'
+    // Показати дашборд
     dashboard.style.display = target === 'content-3' ? 'block' : 'none';
     if (target === 'content-3') {
       setTimeout(() => {
@@ -191,7 +188,7 @@ headerAcidBtn.forEach(button => {
   });
 });
 
-// Activating the .inactive class
+// Активація класу .inactive
 dashboardList.forEach(button => {
   button.addEventListener('click', () => {
     const parent = button.parentNode;
@@ -211,16 +208,6 @@ dashboardList.forEach(button => {
     }
   });
 });
-
-/***/ }),
-
-/***/ "./src/js/components/ex.js":
-/*!*********************************!*\
-  !*** ./src/js/components/ex.js ***!
-  \*********************************/
-/***/ (() => {
-
-
 
 /***/ }),
 
