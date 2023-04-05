@@ -134,6 +134,13 @@
 
 // 480
 @media (max-width: 480px) {
+  .header-acide{
+    min-width: 450px;
+    margin: 0 auto;
+    &__user{
+      margin: 30px 0;
+    }
+  }
 }
 
 // 320

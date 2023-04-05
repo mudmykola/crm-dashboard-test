@@ -143,6 +143,14 @@ a {
   display: flex;
 }
 
+@media (max-width: 480px) {
+  .headercont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
 @media (max-width: 320px) {
   .headercont {
     -webkit-box-orient: vertical;
@@ -416,6 +424,99 @@ a {
   font-weight: bold;
 }
 
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 10px 10px 0 10px;
+  }
+  .dashboard-inner__title {
+    width: 450px;
+    text-align: center;
+  }
+  .dashboard-box {
+    width: 450px;
+  }
+  .dashboard-box__title {
+    padding: 15px;
+    width: 450px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .dashboard-box__title--text {
+    margin-bottom: 10px;
+  }
+  .dashboard-box__title h2 {
+    font-size: 17px;
+    line-height: 22px;
+    margin-bottom: 5px;
+  }
+  .dashboard-box__title p {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .dashboard-category {
+    padding: 0 10px 0 10px;
+    overflow: hidden;
+  }
+  .dashboard-category ul {
+    width: 290px;
+  }
+  .dashboard-category ul li h2 {
+    width: 93px;
+    font-size: 11px;
+    line-height: 18px;
+  }
+  .dashboard-category__email, .dashboard-category__phone {
+    display: none;
+  }
+  .dashboard-category__company {
+    margin: 0 55px 0 45px;
+  }
+  .dashboard-category__country {
+    margin: 0;
+  }
+  .dashboard-category__status {
+    margin: 0;
+  }
+  .dashboard-list {
+    padding: 0 15px 0 15px;
+  }
+  .dashboard-list ul li h2 {
+    font-size: 9px;
+    line-height: 14px;
+  }
+  .dashboard-list__country {
+    width: 50%;
+    margin: 0;
+    padding-left: 20%;
+    text-align: center;
+  }
+  .dashboard-list__status {
+    width: 57px;
+    margin-left: 22px;
+  }
+  .dashboard-list__status button {
+    width: 65px;
+  }
+  .dashboard-list__email, .dashboard-list__phone {
+    display: none;
+  }
+  .dashboard-navig {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .dashboard-navig__data {
+    width: 450px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
 @media (max-width: 320px) {
   .dashboard {
     padding: 10px 10px 0 10px;
@@ -627,6 +728,15 @@ a {
   color: #757575;
 }
 
+@media (max-width: 480px) {
+  .header-acide {
+    min-width: 450px;
+    margin: 0 auto;
+  }
+  .header-acide__user {
+    margin: 30px 0;
+  }
+}
 @media (max-width: 320px) {
   .header-acide__user {
     margin: 30px 0;
