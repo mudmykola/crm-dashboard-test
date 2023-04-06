@@ -1,6 +1,5 @@
 .dashboard {
   padding: 41px 95px 0 71px;
-
   &-inner {
     &__title {
       h1 {
@@ -11,7 +10,6 @@
       }
     }
   }
-
   &-box {
     margin-top: 51px;
     width: 100%;
@@ -240,12 +238,10 @@
     }
   }
 }
-
 #dashboard {
   display: block;
   animation: fade-in 1s ease-in-out;
 }
-
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -254,7 +250,6 @@
     opacity: 1;
   }
 }
-
 .active {
   background: $c109;
   border-color: $c109;
@@ -264,7 +259,6 @@
 
   }
 }
-
 .inactive {
   button {
     text-align: center;
@@ -272,61 +266,464 @@
     color: $c107;
     border: 1px solid $c107;
   }
-
 }
-
 .highlight {
   background-color: yellow;
   font-weight: bold;
 }
-
-
 // 768
 @media (max-width: 768px) {
-}
-
-// 600
-@media (max-width: 600px) {
-}
-
-// 480
-@media (max-width: 480px) {
-}
-
-// 320
-@media (max-width: 320px) {
   .dashboard {
+
     padding: 10px 10px 0 10px;
+
     &-inner {
+
       &__title {
-        width: 290px;
+        width: 580px;
         text-align: center;
       }
     }
+
     &-box {
-      width: 300px;
+
+      width: 445px;
+
       &__title {
         padding: 15px;
-        width: 290px;
+        width: 445px;
         flex-direction: column;
         align-items: flex-start;
+
         &--text {
           margin-bottom: 10px;
         }
+
         h2 {
           font-size: 17px;
           line-height: 22px;
           margin-bottom: 5px;
         }
+
         p {
           font-size: 10px;
           line-height: 15px;
         }
       }
     }
+
     &-category {
       padding: 0 10px 0 10px;
       overflow: hidden;
+
+      ul {
+        width: 445px;
+
+        li {
+
+          h2 {
+            width: 93px;
+            font-size: 11px;
+            line-height: 18px;
+          }
+        }
+      }
+
+      &__phone {
+        display: none;
+      }
+
+      &__email {
+        margin: 0 0 0 52px;
+      }
+
+      &__company {
+        margin: 0 0 0 25px;
+        display: none;
+      }
+
+      &__country {
+        margin-left: 24px;
+      }
+
+      &__status {
+        margin-left: 24px;
+      }
+    }
+
+    &-list {
+      padding: 0 15px 0 15px;
+
+      ul {
+        li {
+          h2 {
+            font-size: 9px;
+            line-height: 14px;
+          }
+        }
+      }
+
+      &__name {
+        width: 100%;
+      }
+
+      &__company {
+        margin: 0;
+        width: 100%;
+        display: none;
+      }
+
+      &__email {
+        width: 100%;
+        margin: 0;
+      }
+
+      &__country {
+        width: 100%;
+        margin: 0;
+
+        text-align: center;
+      }
+
+      &__status {
+        width: 57px;
+        margin-left: 22px;
+
+        button {
+          width: 65px;
+        }
+      }
+
+      &__phone {
+        display: none;
+      }
+    }
+
+    &-navig {
+      flex-direction: column;
+
+      &__data {
+        width: 445px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+// 600
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 10px 10px 0 10px;
+
+    &-inner {
+      &__title {
+        width: 580px;
+        text-align: center;
+      }
+    }
+
+    &-box {
+      width: 580px;
+
+      &__title {
+        padding: 15px;
+        width: 580px;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &--text {
+          margin-bottom: 10px;
+        }
+
+        h2 {
+          font-size: 17px;
+          line-height: 22px;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 10px;
+          line-height: 15px;
+        }
+      }
+    }
+
+    &-category {
+      padding: 0 10px 0 10px;
+      overflow: hidden;
+
+      ul {
+        width: 580px;
+
+        li {
+
+          h2 {
+            width: 93px;
+            font-size: 11px;
+            line-height: 18px;
+          }
+        }
+      }
+
+      &__phone {
+        display: none;
+      }
+
+      &__email {
+        margin: 0 0 0 98px;
+        text-align: center;
+      }
+
+      &__company {
+        margin: 0 0 0 25px;
+        text-align: center;
+      }
+
+      &__country {
+        margin-left: 70px;
+        text-align: center;
+      }
+
+      &__status {
+        width: 100%;
+        margin-left: 36px;
+        text-align: center;
+      }
+    }
+
+    &-list {
+
+      padding: 0 15px 0 15px;
+
+      ul {
+        li {
+          h2 {
+            font-size: 9px;
+            line-height: 14px;
+          }
+        }
+      }
+
+      &__name {
+        width: 100%;
+      }
+
+      &__company {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      &__email {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+      }
+
+      &__country {
+        width: 100%;
+        margin: 0;
+
+        text-align: center;
+      }
+
+      &__status {
+        width: 57px;
+        margin-left: 22px;
+
+        button {
+          width: 65px;
+        }
+      }
+
+      &__phone {
+        display: none;
+      }
+    }
+
+    &-navig {
+      flex-direction: column;
+
+      &__data {
+        width: 580px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+}
+
+// 480
+@media (max-width: 480px) {
+  .dashboard {
+
+    padding: 10px 10px 0 10px;
+
+    &-inner {
+      &__title {
+        width: 450px;
+        text-align: center;
+      }
+    }
+
+    &-box {
+      width: 450px;
+
+      &__title {
+        padding: 15px;
+        width: 450px;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &--text {
+          margin-bottom: 10px;
+        }
+
+        h2 {
+          font-size: 17px;
+          line-height: 22px;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 10px;
+          line-height: 15px;
+        }
+      }
+    }
+
+    &-category {
+      padding: 0 10px 0 10px;
+      overflow: hidden;
+
+      ul {
+        width: 450px;
+
+        li {
+
+          h2 {
+            width: 93px;
+            font-size: 11px;
+            line-height: 18px;
+          }
+        }
+      }
+
+      &__phone {
+        display: none;
+      }
+
+      &__email {
+        margin: 0 0 0 35px;
+      }
+
+      &__company {
+        margin: 0 55px 0 45px;
+        text-align: center;
+      }
+
+      &__country {
+        margin: 0;
+        text-align: center;
+        padding-left: 5%;
+      }
+
+      &__status {
+        margin: 0 0 0 4%;
+        text-align: center;
+      }
+    }
+
+    &-list {
+      padding: 0 15px 0 15px;
+
+      ul {
+        li {
+          h2 {
+            font-size: 9px;
+            line-height: 14px;
+          }
+        }
+      }
+
+      &__country {
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      &__status {
+        width: 57px;
+        margin-left: 22px;
+        text-align: center;
+
+        button {
+          width: 65px;
+        }
+      }
+
+      &__phone {
+        display: none;
+      }
+    }
+
+    &-navig {
+      flex-direction: column;
+
+      &__data {
+        width: 450px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+// 320
+@media (max-width: 320px) {
+  .dashboard {
+    padding: 10px 10px 0 10px;
+
+    &-inner {
+      &__title {
+        width: 290px;
+        text-align: center;
+      }
+    }
+
+    &-box {
+      width: 300px;
+
+      &__title {
+        padding: 15px;
+        width: 290px;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &--text {
+          margin-bottom: 10px;
+        }
+
+        h2 {
+          font-size: 17px;
+          line-height: 22px;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 10px;
+          line-height: 15px;
+        }
+      }
+    }
+
+    &-category {
+      padding: 0 10px 0 10px;
+      overflow: hidden;
+
       ul {
         width: 290px;
 
@@ -339,48 +736,59 @@
           }
         }
       }
+
       &__company, &__email, &__phone {
         display: none;
 
       }
+
       &__country {
-        margin-left: 30px;
+        padding-left: 25%;
       }
+
       &__status {
-        margin-left: 55px;
+        text-align: center;
+        padding-left: 5%;
       }
     }
-    &-list{
+
+    &-list {
       padding: 0 15px 0 15px;
-      ul{
-        li{
-          h2{
+
+      ul {
+        li {
+          h2 {
             font-size: 9px;
             line-height: 14px;
           }
         }
       }
-      &__country{
-        width: 50%;
+
+      &__country {
+        width: 100%;
         margin: 0;
-        padding-left: 20%;
+        padding-left: 0;
         text-align: center;
       }
 
-      &__status{
+      &__status {
         width: 57px;
         margin-left: 22px;
-        button{
+
+        button {
           width: 65px;
         }
       }
-      &__company,&__email,&__phone{
+
+      &__company, &__email, &__phone {
         display: none;
       }
     }
-    &-navig{
+
+    &-navig {
       flex-direction: column;
-      &__data{
+
+      &__data {
         width: 300px;
         text-align: center;
         margin-bottom: 10px;
