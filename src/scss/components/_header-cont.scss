@@ -2,12 +2,11 @@
   display: flex;
 }
 
-// 768
-@media (max-width: 768px) {
-}
-
 // 600
 @media (max-width: 600px) {
+  .headercont{
+    flex-direction: column;
+  }
 }
 
 // 480

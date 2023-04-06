@@ -1,20 +1,22 @@
 .header-acide {
-
   min-width: 306px;
   height: 100%;
   background: $default;
-  @extend  %border-ef;
+  @extend %border-ef;
   &__box {
     width: 242px;
     padding: 36px 28px;
   }
+
   &__logo {
     display: flex;
     align-items: center;
     cursor: pointer;
+
     &--text {
       display: flex;
       align-items: flex-end;
+
       h2 {
         font-size: 26px;
         line-height: 30px;
@@ -30,12 +32,14 @@
       }
     }
   }
+
   &__list {
     margin-top: 54px;
 
     ul {
       li {
         width: 250px;
+
         button {
           display: flex;
           align-items: center;
@@ -44,6 +48,7 @@
           background: transparent;
           border-radius: 8px;
           padding-left: 11px;
+
           p {
             color: $c102;
             font-weight: var(--font-m);
@@ -77,6 +82,7 @@
       }
     }
   }
+
   &__btn {
     &--arrow {
       position: relative;
@@ -102,20 +108,24 @@
     }
 
   }
-  &__user{
+
+  &__user {
     margin: 597px 0 76px;
     display: flex;
     align-items: center;
-    &--text{
+
+    &--text {
       margin-left: 12px;
-      h2{
+
+      h2 {
         margin-bottom: 5px;
         font-size: 14px;
         line-height: 20px;
         font-weight: var(--font-m);
         color: $c101;
       }
-      p{
+
+      p {
         font-size: 12px;
         line-height: 18px;
         color: $c111;
@@ -123,31 +133,33 @@
     }
   }
 }
-
-// 768
-@media (max-width: 768px) {
-}
-
 // 600
 @media (max-width: 600px) {
-}
-
-// 480
-@media (max-width: 480px) {
-  .header-acide{
-    min-width: 450px;
+  .header-acide {
+    min-width: 580px;
     margin: 0 auto;
-    &__user{
+
+    &__user {
       margin: 30px 0;
     }
   }
 }
+// 480
+@media (max-width: 480px) {
+  .header-acide {
+    min-width: 450px;
+    margin: 0 auto;
 
-// 320
-@media (max-width: 320px) {
-.header-acide{
-  &__user{
-    margin: 30px 0;
+    &__user {
+      margin: 30px 0;
+    }
   }
 }
+// 320
+@media (max-width: 320px) {
+  .header-acide {
+    &__user {
+      margin: 30px 0;
+    }
+  }
 }
